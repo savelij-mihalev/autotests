@@ -1,7 +1,9 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class LoginTests {
@@ -19,5 +21,10 @@ public class LoginTests {
         $("[name=password]").setValue("asfdasewrw").pressEnter();
 
         $("[name=password]").shouldBe(visible);
+    }
+
+    @AfterEach
+    void closeBrowser() {
+        closeWebDriver();
     }
 }

@@ -47,6 +47,9 @@ cd autotests
 ```bash
 ./gradlew test --tests "LoginTests"
 ```
+## Результат запуска
+
+![Результат запуска тестов](images/tests-passed.png)
 
 ## Автор
 
